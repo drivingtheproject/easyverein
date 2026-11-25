@@ -1,0 +1,18 @@
+.evmf-admin .evmf-tabs { margin-bottom: 1em; }
+.evmf-admin .evmf-tab-panel[hidden] { display: none; }
+.evmf-admin .evmf-status-table { max-width: 720px; margin: 1em 0; }
+.evmf-admin .evmf-status-table th { width: 220px; font-weight: 600; }
+.evmf-admin .evmf-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 12px; }
+.evmf-admin .evmf-badge--ok { background: #edfaef; color: #1a7f37; }
+.evmf-admin .evmf-badge--warning { background: #fcf9e8; color: #996800; }
+.evmf-admin .evmf-badge--error { background: #fcf0f1; color: #b32d2e; }
+.evmf-admin .evmf-result { margin-left: 8px; font-weight: 600; }
+.evmf-admin .evmf-result.is-ok { color: #1a7f37; }
+.evmf-admin .evmf-result.is-error { color: #b32d2e; }
+.evmf-admin .evmf-types { max-width: 1000px; }
+.evmf-admin .evmf-types td { vertical-align: middle; }
+.evmf-admin .evmf-types .regular-text { width: 100%; }
+.evmf-admin .evmf-w-8 { width: 8em; }
+.evmf-admin .evmf-w-10 { width: 10em; }
+.evmf-admin .evmf-log-viewer textarea { font-size: 12px; max-width: 1100px; }
+.evmf-admin .evmf-shortcode-hint code { user-select: all; }

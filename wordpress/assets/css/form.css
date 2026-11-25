@@ -1,0 +1,117 @@
+/* easyVerein Membership Form – neutral styles that inherit the theme's fonts and colours.
+   Override the custom properties in your theme to restyle. */
+.evmf {
+	--evmf-accent: #1e6fb8;
+	--evmf-accent-hover: #155a96;
+	--evmf-border: #c3c4c7;
+	--evmf-muted-bg: #f6f7f7;
+	--evmf-error: #b32d2e;
+	--evmf-error-bg: #fcf0f1;
+	--evmf-success: #1a7f37;
+	--evmf-success-bg: #edfaef;
+	--evmf-radius: 4px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.evmf-title { text-align: center; margin-bottom: 1.5em; }
+
+.evmf-fieldset {
+	border: 1px solid var(--evmf-border);
+	border-radius: var(--evmf-radius);
+	padding: 1.25em 1.25em 0.25em;
+	margin: 0 0 1.5em;
+	min-width: 0;
+}
+.evmf-fieldset[hidden] { display: none; }
+.evmf-fieldset legend { font-weight: 600; padding: 0 0.5em; }
+
+.evmf-subtitle { margin: 0.5em 0; font-size: 1em; }
+
+.evmf-row { display: flex; flex-wrap: wrap; gap: 0 1.25em; }
+.evmf-col { flex: 1 1 220px; margin: 0 0 1em; min-width: 0; }
+.evmf-col--narrow { flex: 0 1 160px; }
+.evmf-col--wide { flex: 2 1 320px; }
+.evmf-col--action { flex: 0 0 auto; align-self: flex-end; }
+
+.evmf label { display: block; margin-bottom: 0.35em; font-size: 0.95em; }
+.evmf-hint { font-weight: normal; opacity: 0.75; }
+.evmf-required { color: var(--evmf-error); }
+
+.evmf input[type="text"],
+.evmf input[type="email"],
+.evmf input[type="tel"],
+.evmf input[type="date"],
+.evmf select {
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 42px;
+	padding: 0.5em 0.65em;
+	border: 1px solid var(--evmf-border);
+	border-radius: var(--evmf-radius);
+	font: inherit;
+	background: #fff;
+}
+.evmf input:focus,
+.evmf select:focus {
+	outline: 2px solid var(--evmf-accent);
+	outline-offset: 1px;
+	border-color: var(--evmf-accent);
+}
+.evmf [aria-invalid="true"] { border-color: var(--evmf-error); }
+
+.evmf-field-error { display: block; color: var(--evmf-error); font-size: 0.875em; margin-top: 0.3em; }
+
+.evmf-child {
+	background: var(--evmf-muted-bg);
+	border-radius: var(--evmf-radius);
+	padding: 0.75em 0.75em 0;
+	margin-bottom: 0.75em;
+}
+
+.evmf-creditor { font-size: 0.9em; margin-top: 0; }
+
+.evmf-consent {
+	background: var(--evmf-muted-bg);
+	border: 1px solid var(--evmf-border);
+	border-radius: var(--evmf-radius);
+	padding: 1em;
+	margin: 0 0 1.25em;
+}
+.evmf-consent label { display: flex; gap: 0.75em; align-items: flex-start; font-size: 0.9em; line-height: 1.5; margin: 0; }
+.evmf-consent input[type="checkbox"] { margin-top: 0.3em; flex: 0 0 auto; }
+
+.evmf-captcha { margin: 0 0 1.25em; }
+
+.evmf-button {
+	display: inline-block;
+	background: var(--evmf-accent);
+	color: #fff;
+	border: 0;
+	border-radius: var(--evmf-radius);
+	padding: 0.7em 1.4em;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+.evmf-button:hover,
+.evmf-button:focus { background: var(--evmf-accent-hover); color: #fff; }
+.evmf-button:disabled { opacity: 0.6; cursor: not-allowed; }
+.evmf-button--secondary { background: transparent; color: var(--evmf-accent); border: 1px solid var(--evmf-accent); font-weight: normal; padding: 0.5em 1em; }
+.evmf-button--secondary:hover,
+.evmf-button--secondary:focus { background: var(--evmf-accent); color: #fff; }
+
+.evmf-notice { padding: 0.9em 1.1em; border-radius: var(--evmf-radius); margin: 0 0 1.5em; border-left: 4px solid; }
+.evmf-notice p { margin: 0.25em 0; }
+.evmf-notice--error { background: var(--evmf-error-bg); border-color: var(--evmf-error); }
+.evmf-notice--success { background: var(--evmf-success-bg); border-color: var(--evmf-success); }
+
+.evmf-legend { font-size: 0.85em; opacity: 0.8; }
+
+/* Honeypot: visually hidden but not display:none (some bots skip hidden fields). */
+.evmf-hp { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+
+@media (max-width: 600px) {
+	.evmf-col, .evmf-col--narrow, .evmf-col--wide { flex-basis: 100%; }
+	.evmf-col--action { align-self: flex-start; }
+}
